@@ -1,9 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { randomBytes } = require("crypto"); // to nenerate random id
+const cors = require("cors");
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors()); // oue app is gooing to work like middlewire
 
 const posts = {};
 
